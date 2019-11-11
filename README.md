@@ -2,17 +2,39 @@
 
 Supplementary tools - especially GitHub Actions - used to support the simple-as-cake Inkling Flow workflow.
 
+## Your Actions
+
+In order to use Inkling Flow, you need to:
+
+1. Read through this entire file.
+2. Install the relevant GitHub Issues provided with this repository.
+3. Add the `CHANGELOG_GITHUB_REPOSITORY` secret to your repositories.
+4. (Optional) Add the `ZENHUB_API_KEY` secret to your repositories.
+5. Add the `epic` and `breaking` labels to your organisation.
+
 ## Maintainer Documentation
 
 For us, this is the `README.md` file and package metadata files (e.g.: `Cargo.toml`). Any supplementary files required should be linked from the `README.md` file. Anything a new developer with zero prior visibility of the project should be able to start contributing after reading `README.md`.
 
+`README.md` cannot be automated (except maybe through badges) but package metadata can: versions are automatically dealt with.
+
 ### `FEATURES.md` file
 
-I believe in the inclusion of a `FEATURES.md` file in all repositories that warrant it (sorry, not this one). This file should simply be updated every time a GitHub Issue tagged `epic` 
+I believe in the inclusion of a `FEATURES.md` file in all repositories that warrant it. This file theoretically can be used by a marketing team to advertise a product.
+
+Inkling Flow suggests that any issue marked `epic` should be included in a list (including contents) before any release. They can be organised by open and closed statuses.
+
+To indicate a feature is not yet ready, all a maintainer needs to do is to add a comment at the top of an `epic` saying something like:
+
+> This major feature is not yet implemented in this version.
+
+Using the `epic` tag (case-insensitive) allows it to integrate nicely into tools like ZenHub, but the use of such tools is optional. The addition of the ZenHub API key to the configuration of the related Action will allow it to pull information from that instead of needing to write extra info in the Issue itself.
 
 ## Release Documentation
 
-This is the `CHANGELOG.md` file, GitHub Releases descriptions, and any blog posts or release documentation accompanied with an artifact. Inkling Flow suggests that GitHub Releases should be based on `CHANGELOG.md` which in turn should be based on GitHub Issues and Milestones. This entire process is automated:
+This is the `CHANGELOG.md` file, GitHub Releases descriptions, and any blog posts or release documentation accompanied with an artifact. Inkling Flow suggests that GitHub Releases should be based on `CHANGELOG.md` which in turn should be based on GitHub Issues and Milestones. This entire process is automated.
+
+Any blog posts for changelogs should be based from GitHub Releases and either the GitHub API or the blog platform's API.
 
 ## CI/CD Definition
 
