@@ -1,20 +1,26 @@
 # Inkling Flow
 
-Supplementary tools - especially GitHub Actions - used to support the simple-as-cake Inkling Flow workflow.
+A process document on the (relatively) simple Inkling Flow.
 
 ## Your Actions
 
 In order to use Inkling Flow, you need to:
 
 1. Read through this entire file.
-2. Install the relevant GitHub Issues provided with this repository.
+2. Install the relevant GitHub Actions provided with this repository.
+   1. See below for details.
 3. Add the `CHANGELOG_GITHUB_REPOSITORY` secret to your repositories.
+   1. This is a personal access/OAuth token.
 4. (Optional) Add the `ZENHUB_API_KEY` secret to your repositories.
-5. Add the `epic` and `breaking` labels to your organisation.
+5. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
+
+## GitHub Issues
+
+> This section is to-be-filled.
 
 ## Maintainer Documentation
 
-For us, this is the `README.md` file and package metadata files (e.g.: `Cargo.toml`). Any supplementary files required should be linked from the `README.md` file. Anything a new developer with zero prior visibility of the project should be able to start contributing after reading `README.md`.
+For us, "maintainer documentation" refers to the `README.md` file and package metadata files (e.g.: `Cargo.toml`). Any supplementary files required should be linked from the `README.md` file. A new developer should be able to read `README.md` and know everything they need to know to be useful.
 
 `README.md` cannot be automated (except maybe through badges) but package metadata can: versions are automatically dealt with.
 
