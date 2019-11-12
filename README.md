@@ -23,6 +23,7 @@ Your workflow file should contain several workflows for different triggers. See 
 - [ ] autobadge
 - [ ] automilestone
 - [ ] autofeature
+- [ ] autorelease
 
 As you might have guessed, this repository uses this workflow.
 
