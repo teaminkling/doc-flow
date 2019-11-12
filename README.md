@@ -26,7 +26,7 @@ Your workflow file should contain several workflows for different triggers. See 
 - [ ] autorelease
 - [x] [create-issue-branch](https://github.com/apps/create-issue-branch)
 
-As you might have guessed, this repository uses this workflow.
+To see a repository that inherently uses this workflow, check out [teaminkling/base](https://github.com/teaminkling/base).
 
 ## Maintainer Documentation
 
