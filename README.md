@@ -18,9 +18,10 @@ Your workflow file should contain several workflows for different triggers. See 
 
 > This section is TODO.
 
+- [x] skip-commit
 - [x] autologger
 - [ ] autoversion
-- [ ] autobadger
+- [x] autobadger
 - [ ] automilestone
 - [ ] autofeature
 - [ ] autorelease
