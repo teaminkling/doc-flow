@@ -22,7 +22,7 @@ Your workflow file should contain several workflows for different triggers. See 
 - [x] autologger
 - [x] autoversion
 - [x] autobadger
-- [ ] automilestone
+- [x] automilestone
 - [ ] autofeature
 - [ ] autorelease
 - [x] [create-issue-branch](https://github.com/apps/create-issue-branch)
