@@ -20,7 +20,7 @@ Your workflow file should contain several workflows for different triggers. See 
 
 - [x] autologger
 - [ ] autoversion
-- [ ] autobadge
+- [ ] autobadger
 - [ ] automilestone
 - [ ] autofeature
 - [ ] autorelease
