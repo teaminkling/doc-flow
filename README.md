@@ -20,7 +20,7 @@ Your workflow file should contain several workflows for different triggers. See 
 
 - [x] skip-commit
 - [x] autologger
-- [ ] autoversion
+- [x] autoversion
 - [x] autobadger
 - [ ] automilestone
 - [ ] autofeature
@@ -46,6 +46,8 @@ To indicate a feature is not yet ready, all a maintainer needs to do is to add a
 > This major feature is not yet implemented in this version.
 
 Using the `epic` tag (case-insensitive) allows it to integrate nicely into tools like ZenHub, but the use of such tools is optional. The addition of the ZenHub API key to the configuration of the related Action will allow it to pull information from that instead of needing to write extra info in the Issue itself.
+
+> NOTE: This isn't true right now.
 
 ## Release Documentation
 
