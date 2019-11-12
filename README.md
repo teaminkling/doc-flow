@@ -7,16 +7,24 @@ A process document on the (relatively) simple Inkling Flow.
 In order to use Inkling Flow, you need to:
 
 1. Read through this entire file.
-2. Install the relevant GitHub Actions provided with this repository.
-   1. See below for details.
-3. Add the `CHANGELOG_GITHUB_REPOSITORY` secret to your repositories.
-   1. This is a personal access/OAuth token.
-4. (Optional) Add the `ZENHUB_API_KEY` secret to your repositories.
-5. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
+2. [Install the relevant GitHub Actions](#github-actions) provided with this repository.
+3. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
 
-## GitHub Issues
+## GitHub Actions
 
-> This section is to-be-filled.
+> This section is not yet completed, as there are more actions to write.
+
+Your workflow file should contain several workflows for different triggers. See [CI-CD Definition below](#cicd-definition) to understand what we are doing, but here's an example workflow:
+
+> This section is TODO.
+
+- [x] autologger
+- [ ] autoversion
+- [ ] autobadge
+- [ ] automilestone
+- [ ] autofeature
+
+As you might have guessed, this repository uses this workflow.
 
 ## Maintainer Documentation
 
@@ -44,19 +52,22 @@ Any blog posts for changelogs should be based from GitHub Releases and either th
 
 ## CI/CD Definition
 
+In **bold**, we have steps you must define per type of framework.
+
 - On a merge or a push to `master`, a script runs. It may automatically commit to `master` by updating certain files.
   - Versions are incremented in supported package metadata files.
   - `CHANGELOG.md` is updated with most recent changes. Human-readable changes are retained, if present.
   - `FEATURES.md` is updated.
+  - Milestones are updated automatically.
 - On any push to `master` or to an open pull request:
-  - Compile/test as usual.
-  - Publish release candidate version.
-  - Run any code quality tools available for the framework/language.
-  - Generate code documentation and publish to appropriate location.
+  - **Compile/test as usual.**
+  - **Publish release candidate version.**
+  - **Run any code quality tools available for the framework/language.**
+  - **Generate code documentation and publish to appropriate location.**
 - On any `git tag`.
-  - Package and publish release version.
-  - Update the GitHub Release that was created with the tag action.
-  - Deploy to environments (if applicable).
+  - **Package and publish release version.**
+  - **Update the GitHub Release that was created with the tag action.**
+  - **Deploy to environments (if applicable).**
 
 ## Versioning Definition
 
