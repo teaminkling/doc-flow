@@ -6,27 +6,16 @@ A process document on the (relatively) simple Inkling Flow.
 
 In order to use Inkling Flow, you need to:
 
-1. Read through this entire file.
-2. Use [Autosuite](https://github.com/autosuite). Check out [teaminkling/base](https://github.com/teaminkling/base) for a template that uses all it has to offer!
+1. Read through this file.
+2. Use [Autosuite](https://github.com/autosuite)'s GitHub Actions.
 3. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
 
 ## Maintainer Documentation
 
-For us, "maintainer documentation" refers to the `README.md` file and package metadata files (e.g.: `Cargo.toml`). Any supplementary files required should be linked from the `README.md` file. A new developer should be able to read `README.md` and know everything they need to know to be useful.
+This is the `README.md` file, anything linked from it, and package metadata files (e.g.: `Cargo.toml`). A new developer
+should be able to read `README.md` and know everything they need to know to be useful.
 
-`README.md` cannot be automated (except maybe through badges) but package metadata can: versions are automatically dealt with.
-
-### `FEATURES.md` file
-
-I believe in the inclusion of a `FEATURES.md` file in all repositories that warrant it. This file theoretically can be used by a marketing team to advertise a product.
-
-Inkling Flow suggests that any issue marked `epic` should be included in a list (including contents) before any release. They can be organised by open and closed statuses.
-
-These features will not be added to the list until they are closed.
-
-Using the `epic` tag (case-insensitive) allows it to integrate nicely into tools like ZenHub, but the use of such tools is optional.
-
-> NOTE: This isn't true right now.
+Package metadata files have their versions automated. `README.md` have their badges automated too.
 
 ## Release Documentation
 
