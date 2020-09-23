@@ -18,6 +18,7 @@ The development life cycle is:
 ### Acceptance Tests
 
 - For each service, software requirements (defined as Epics in GitHub Issues) tie to acceptance criteria.
+- Such tests may need to test third party integrations (network-enabled calls) or I/O (database or file).
 
 ### Unit Tests
 
