@@ -1,26 +1,32 @@
 # Testing Guidelines
 
-Testing is vital to software development and should be written first after software design.
+The development life cycle is:
+
+1. Identify the problem.
+2. Design a solution.
+3. Write tests.
+4. Implement.
+5. Ensure quality.
+6. Deploy.
 
 ## Contract-Based Testing
 
-Client services must create a contract for what it produces and expects to consume from producer services. This will
-be tested for each service (including frontend applications).
-
-This will test the entire system without needing to package and run every service in an entire application (e.g., an
-entire Kubernetes cluster just to run tests on one acceptance criterion).
+- Client services must create a contract for what it produces and expects to consume from producer services.
+  - This is applicable for each service (including frontend applications).
+  - This tests the entire system without needing to package and run every service in an entire application.
 
 ### Acceptance Tests
 
-For each service, software requirements (defined as Epics in GitHub Issues) tie to acceptance criteria. Epics also
-correspond to major features in the software.
+- For each service, software requirements (defined as Epics in GitHub Issues) tie to acceptance criteria.
 
 ### Unit Tests
 
-Unitary tests must be written for "complex" functions/methods to ensure correctness.
+- Unitary tests must be written for "complex" functions/methods to ensure correctness.
 
 ## Notes
 
-We do not write integration tests and write our code to be multi-paradigm but mostly functional. However, quality
-assurance is run separate to production versions and various forms of testing deployments (A-B testing, canary
-deployments etc) are used for safety.
+- We do not write integration tests.
+- We write our code to be multi-paradigm but mostly functional.
+- Quality Assurance (QA) is run separate to production versions and various forms of testing deployments.
+  - A/B Testing.
+  - Canary Deployments.
