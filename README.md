@@ -9,13 +9,9 @@ In order to use Inkling Flow, you need to:
 1. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
 2. Read through the rest of this file.
 
-## Maintainer Documentation
+## Flow
 
-1. Document your `README.md` file with build and deploy instructions.
-2. Automate versioning in `package.json` and similar package metadata files.
-    - Autoversion might help with this.
-
-## Change Management
+### Change Management
 
 1. Prototype on `main` with no fear of breaking or Issues pre-`1.0.0`.
 2. Changes after `1.0.0` should be associated to GitHub Issues.
@@ -25,7 +21,7 @@ In order to use Inkling Flow, you need to:
 4. Available milestones are automated.
     - Automilestone might help with this.
 
-## Release Documentation
+### Release Documentation
 
 1. Release by pushing a tag e.g., `pre-1.2.11`, `pre-0.18.0-rc2`.
 2. Automate tagging of `1.2.11` and `pre-0.18.0-rc2` leading to GitHub Releases, artifact creation,
@@ -33,7 +29,7 @@ In order to use Inkling Flow, you need to:
     - Autorelease might help with this.
 3. `main` branch is stable; builds should succeed.
 
-## Versioning and Branching
+### Versioning and Branching
 
 Just use [Semantic Versioning][semver-link]. Remember that `MAJOR` is only incremented from `0` to 
 `1` on a first stable release; breaking changes before `1.0.0` are expected.
@@ -49,7 +45,15 @@ a semi-linear flow.
 - `issue` branches (based on the issue number and description) are unstable.
   - They are never individually versioned.
 
-## Extra Considerations
+## Good Practice
+
+### Maintainer Documentation
+
+1. Document your `README.md` file with build and deploy instructions.
+2. Automate versioning in `package.json` and similar package metadata files.
+    - Autoversion might help with this.
+
+### Extra Considerations
 
 - Consider running some kind of code qualimetry on your codebase.
 - Definitely try to follow Test-Driven Development/Behaviour-Driven Development.
