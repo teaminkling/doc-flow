@@ -1,24 +1,17 @@
 # Inkling Flow
 
-A simple but robust configuration management process.
-
-## Your Actions
-
-In order to use Inkling Flow, you need to:
-
-1. Add the `epic` and `breaking` labels to your organisation's default Issue labels.
-2. Read through the rest of this file.
+A simple but robust configuration management process using ZenHub.
 
 ## Flow
 
 ### Change Management
 
-1. Prototype on `main` with no fear of breaking or Issues pre-`1.0.0`.
-2. Changes after `1.0.0` should be associated to GitHub Issues.
-   - Each has a mandatory Assignee and Milestone.
-3. An assigned Issue should automatically create a branch, e.g., `i-512-short-description-here`.
-4. Milestones are manually created and tracked.
-    - Consider the user of a third party system such as ZenHub.
+1. Create an issue for each logical change (bug or feature).
+   - Each issue has an Assignee.
+   - Each issue has a Milestone.
+2. Create Milestones as necessary.
+3. Plan large changes using `Epic`s.
+4. Each Milestone has a versioned Release.
 
 ### Release Documentation
 
@@ -26,7 +19,7 @@ In order to use Inkling Flow, you need to:
 
 1. Release by pushing a tag e.g., `pre-1.2.11`, `pre-0.18.0-rc2`.
 2. Automate tagging of `1.2.11` and `pre-0.18.0-rc2` leading to GitHub Releases etc (as required).
-3. `main` branch is stable; builds must succeed.
+3. `main` branch is stable.
 
 ### Versioning and Branching
 
