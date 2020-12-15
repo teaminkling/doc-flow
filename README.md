@@ -4,22 +4,37 @@ A simple but robust configuration management process using ZenHub.
 
 ## Flow
 
-### Change Management
+TL;DR:
 
-1. Create an issue for each logical change (bug or feature).
-   - Each issue has an Assignee.
-   - Each issue has a Milestone.
-2. Create Milestones as necessary.
-3. Plan large changes using `Epic`s.
-4. Each Milestone has a versioned Release.
+- Create a milestone at the start of a new version of software.
+- Assign all issues to milestones (assigned with descriptive titles).
+- Tag. Manually release after writing release notes.
 
-### Release Documentation
+### Plan a Sprint/Milestone
 
-> `ink-release` performs automation for this.
+Either this is a set period of time (as in Scrum) or a group of mandatory Issues. Either way, plan
+by creating the Milestone first.
 
-1. Release by pushing a tag e.g., `pre-1.2.11`, `pre-0.18.0-rc2`.
-2. Automate tagging of `1.2.11` and `pre-0.18.0-rc2` leading to GitHub Releases etc (as required).
-3. `main` branch is stable.
+### Assign Issues to Milestones
+
+Every Issue can only be worked on when it has both an Assignee and a Milestone. The titles should
+be descriptive so the problem fixed is clearly understood from just the title.
+
+### Automated Pull Requests
+
+Pull Requests have quality checks. Every push to any branch checks the test suite and coverage.
+A pull request/push will fail if it does not 
+
+### Release a Version
+
+When the `main` branch is ready for deployment, it is tagged with `v1.0.5` (for example).
+Maintainers write release notes and then hit "Publish Release" in GitHub Releases which triggers
+a GitHub Action to perform common CI/CD tasks.
+
+The version is figured out on each deployment. This is also how hotfixes are deployed (patch
+versions for production).
+
+## Specifics
 
 ### Versioning and Branching
 
@@ -45,10 +60,7 @@ Specifically:
 
 ### Maintainer Documentation
 
-> `ink-version` helps with this.
-
-1. Document your `README.md` file with build and deploy instructions.
-2. Automate versioning in `package.json` and similar package metadata files.
+Document your `README.md` file with build and deploy instructions.
 
 ### Extra Considerations
 
