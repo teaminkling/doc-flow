@@ -20,10 +20,9 @@ by creating the Milestone first.
 Every Issue can only be worked on when it has both an Assignee and a Milestone. The titles should
 be descriptive so the problem fixed is clearly understood from just the title.
 
-### Automated Pull Requests
+### Pipeline Quality Checks
 
 Pull Requests have quality checks. Every push to any branch checks the test suite and coverage.
-A pull request/push will fail if it does not 
 
 ### Release a Version
 
@@ -69,3 +68,4 @@ Document your `README.md` file with build and deploy instructions.
 - Set up code coverage at least before `1.0.0`.
 
 [autosuite-organisation]: https://github.com/autosuite
+[semver-link]: https://semver.org
