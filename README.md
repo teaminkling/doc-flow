@@ -4,40 +4,32 @@ A simple but robust configuration management process using ZenHub.
 
 ## Flow
 
-TL;DR:
+TL;DR is that it's Scrum but easier and using just GitHub (and optionally ZenHub):
 
-- Create a milestone at the start of a new version of software.
-- Assign all issues to milestones (assigned with descriptive titles).
-- Tag. Manually release after writing release notes.
+- Create a milestone/sprint for every upcoming version.
+- Assign all issues to milestones.
+- Tag with `vX.Y.Z` and manually release with your change notes.
 
-### Plan a Sprint/Milestone
+### Planning a Milestone
 
-Either this is a set period of time (as in Scrum) or a group of mandatory Issues. Either way, plan
-by creating the Milestone first.
+Milestones are created manually when the need arises. Every two weeks, the minor or major version
+goes up (see [specifics](#specifics) below) but sometimes hotfixes need to be applied.
 
-### Assign Issues to Milestones
-
-Every Issue can only be worked on when it has both an Assignee and a Milestone. The titles should
-be descriptive so the problem fixed is clearly understood from just the title.
-
-### Pipeline Quality Checks
-
-Pull Requests have quality checks. Every push to any branch checks the test suite and coverage.
+These hotfixes often branch directly from the release and are cherrypicked from the issue branches
+off the trunk. They are rare in software offering an API and non-existent in applications.
 
 ### Release a Version
 
-When the `main` branch is ready for deployment, it is tagged with `v1.0.5` (for example).
-Maintainers write release notes and then hit "Publish Release" in GitHub Releases which triggers
-a GitHub Action to perform common CI/CD tasks.
+When the `main` branch is ready for deployment, it is tagged with `v1.0.5` (for example). It must
+have already passed quality checks for this.
 
-The version is figured out on each deployment. This is also how hotfixes are deployed (patch
-versions for production).
+After that, maintainers write release notes and then hit "Publish Release" in GitHub Releases.
 
 ## Specifics
 
 ### Versioning and Branching
 
-Just use [Semantic Versioning][semver-link]. Remember that `MAJOR` is only incremented from `0` to 
+We use [Semantic Versioning][semver-link]. Remember that `MAJOR` is only incremented from `0` to 
 `1` on a first stable release; breaking changes before `1.0.0` are expected.
 
 Branching is:
@@ -48,8 +40,8 @@ Branching is:
 
 Specifically:
 
-- `main` contains `dev` code.
-  - Deploys: `0.1.13-dev+2`.
+- `main` contains `rc` code.
+  - Deploys: `0.1.13-rc+2`.
 - Tags contain production versions.
   - Deploys: `0.1.13`.
 - `issue` branches (based on the issue number and description) are unstable.
@@ -64,8 +56,7 @@ Document your `README.md` file with build and deploy instructions.
 ### Extra Considerations
 
 - Code qualimetry should run locally and in each pull request via Actions.
-- Definitely try to follow Test-Driven Development/Behaviour-Driven Development.
+- Try to follow Test-Driven Development/Behaviour-Driven Development.
 - Set up code coverage at least before `1.0.0`.
 
-[autosuite-organisation]: https://github.com/autosuite
 [semver-link]: https://semver.org
